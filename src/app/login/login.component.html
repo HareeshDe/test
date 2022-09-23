@@ -1,0 +1,24 @@
+ <div class="container">
+  <div class="row">
+     <div class="card">
+       <div class="text-center">
+         <h1>Login</h1>
+         <p>Enter your credential to continue <br> <br>
+       </div>
+       <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <label for="" class="form-label">Email address</label>
+        <input type="text" formControlName="email" class="form-control" placeholder="Enter email">
+        <span class="text-danger" style="font-size:.8rem;" *ngIf="err && err['email'].invalid && err['email'].touched">*This field is required</span><br>
+
+        <label for="" class="form-label">Password</label>
+        <input type="password" formControlName="password" class="form-control" placeholder="Enter password">
+        <span class="text-danger" style="font-size:.8rem;" *ngIf="err && err['password'].invalid && err['password'].touched">*This field is required</span><br>
+
+        <button [disabled]="loginForm.invalid" type="submit" class="btn btn-danger">Submit</button>
+        <br> <br>
+        <p>New User..! &nbsp; <a routerLink="/register" style="font-size:1rem; font-style: italic;">Click here to Signup</a></p>
+
+      </form>
+    </div>
+  </div>
+</div>

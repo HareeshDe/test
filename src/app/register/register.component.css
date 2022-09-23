@@ -1,0 +1,25 @@
+.card{
+  margin-top: 30px;
+  border: none;
+  width: 500px;
+  height: 655px;
+  padding: 40px;
+  padding-top: 15px;
+  padding-bottom: 8px;
+  left: 150px;
+  background-color: #222;
+  color: white;
+  }
+  .btn{
+    width: 6rem;
+    background-color: rgb(221, 44, 79);
+    color: black;
+    font-weight: 700;
+  }
+  .btn:hover{
+    width: 6rem;
+    background-color: #222;
+    color: crimson;
+    border: 2px solid;
+  }
+

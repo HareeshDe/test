@@ -1,0 +1,44 @@
+<div class="container">
+ <div class="row">
+   <div class="col-md-6">
+     <div class="card">
+       <div class="text-center">
+         <h1>Sign up</h1>
+         <p>Enter your details to Register</p>
+       </div>
+       <form [formGroup]="registerform" (ngSubmit)="signUp()">
+            <label for="" class="form-label">Name</label>
+            <input formControlName="name" type="text" class="form-control" placeholder="Enter name">
+            <span class="text-danger" style="font-size:.8rem;"  *ngIf="err && err['name'].invalid && err['name'].touched">*This field is required</span> <br>
+
+            <label for="" class="form-label">Email Address</label>
+            <input formControlName="email" type="email" class="form-control" placeholder="Enter address">
+            <span class="text-danger" style="font-size:.8rem;" *ngIf="err && err['email'].invalid && err['email'].touched">*This field is required</span> <br>
+
+            <label for="" class="form-label">Contact Number</label>
+            <input formControlName="contact" type="number" class="form-control" placeholder="Enter mobile number">
+            <span class="text-danger" style="font-size:.8rem;" *ngIf="err && err['contact'].invalid && err['contact'].touched">*Mobile number is not 10 digit</span> <br>
+
+          <div class="radio">
+            <p>Gender : &nbsp;
+            <input formControlName="gender" type="radio" value="Male">&nbsp;
+            <label for="Male">Male</label>&nbsp;
+            <input formControlName="gender" type="radio" value="Female">&nbsp;
+            <label for="Female">Female</label><br>
+            <span class="text-danger" style="font-size:.8rem;" *ngIf="err && err['gender'].invalid ">*This field is required</span>
+          </div>
+
+            <label for="" class="form-label">Password</label>
+            <input formControlName="password" type="password" class="form-control" placeholder="Enter password">
+            <span class="text-danger" style="font-size:.8rem;" *ngIf="err && err['password'].invalid && err['password'].touched">*This field is required</span> <br>
+
+           <button type="submit" [disabled]="registerform.invalid" class="btn btn-danger">Sign up</button>
+           <br> <br>
+         <p>Already Registered..! &nbsp; <a routerLink="/login" style="font-size:1rem; font-style: italic;" >Click here to Login</a></p>
+       </form>
+     </div>
+   </div>
+  </div>
+</div>
+
+

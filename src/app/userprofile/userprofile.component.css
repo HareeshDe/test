@@ -1,0 +1,28 @@
+table{
+  border-collapse: collapse;
+  border:3px solid;
+  margin-left: 8%;
+}
+table th,td{
+  border: 3px solid;
+  padding: 8px;
+  padding: 10px;
+}
+th{
+  color: rgb(201, 47, 19);
+  font-size: 22px;
+  font-weight: 700;
+}
+td{
+  color: tomato;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px;
+}
+h2{
+padding-left: 300px;
+margin-top: 80px;
+font-style: bold;
+color:crimson;
+}
